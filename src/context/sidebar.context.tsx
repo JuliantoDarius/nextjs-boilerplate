@@ -1,4 +1,4 @@
-import { SetStateType } from "@/utils/types/set-state.type";
+import { SetStateType } from "@utils/types/set-state.type";
 import { useRouter } from "next/router";
 import {
   createContext,

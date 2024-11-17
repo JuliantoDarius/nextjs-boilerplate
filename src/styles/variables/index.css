@@ -1,5 +1,11 @@
 :root {
-  --background: #d9d3d3;
-  --foreground: #796262;
-  --text-color: #323131;
+  --background: #3e3030;
+  --foreground: #6d6868;
+  --text-color: #e5d6e1;
+  --sidebar: #483f49;
+  --sidebar-foreground: #422845;
+  --navbar: #4f3153;
+  --scrollbar-thumb-color: #4d307a;
+  --scrollbar-track-color: #320e6a;
+  --scrollbar-hover-color: #4b3471;
 }

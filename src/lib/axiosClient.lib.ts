@@ -1,7 +1,7 @@
-import { getCookie, removeCookie, setCookie } from "@/helpers/cookie.helper";
-// import { logoutService } from "@/service/auth.service";
-import { API_ROUTES } from "@/utils/common/api-route.common";
-import { API_BASE_URL, CookieName } from "@/utils/common/constants.common";
+import { logoutService } from "@services/auth.service";
+import { getCookie, removeCookie, setCookie } from "@helpers/cookie.helper";
+import { API_ROUTES } from "@utils/common/api-route.common";
+import { API_BASE_URL, CookieName } from "@utils/common/constants.common";
 import axios, { InternalAxiosRequestConfig } from "axios";
 
 export const authAxios = axios.create({
@@ -50,7 +50,7 @@ const errorHandler = async (error: any) => {
       setCookie(CookieName.accessToken, resBody.data.access_token, true);
       setCookie(CookieName.refreshToken, resBody.data.refresh_token, true);
     } catch (err) {
-      // logoutService(refreshToken ?? "");
+      logoutService(refreshToken ?? "");
       removeCookie(CookieName.accessToken);
       removeCookie(CookieName.refreshToken);
       removeCookie(CookieName.rememberMe);

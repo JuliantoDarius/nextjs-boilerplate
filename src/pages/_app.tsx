@@ -1,11 +1,11 @@
-import "@/styles/globals.css";
-import { queryClient } from "@/lib/query-client.lib";
+import "@styles/globals.css";
 import { MantineProvider } from "@mantine/core";
 import { QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import SidebarProvider from "@/context/sidebar.context";
+import { queryClient } from "@lib/query-client.lib";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

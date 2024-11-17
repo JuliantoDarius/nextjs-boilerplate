@@ -1,22 +1,11 @@
-import Navbar from "@/components/ui/navbar";
-import Sidebar from "@/components/ui/sidebar";
-import { useSidebarContext } from "@/context/sidebar.context";
-import { Button } from "@mantine/core";
+import dynamic from "next/dynamic";
 
-export default function Components() {
-  const { isSidebarOpen } = useSidebarContext();
+const ComponentsView = dynamic(() => import("@containers/components/views"));
 
-  return (
-    <>
-      <Navbar />
-      <main
-        className={`z-30 space-y-10 px-4 mx-auto ${
-          isSidebarOpen ? "pl-[19rem]" : ""
-        } transition-all duration-500 ease-out`}
-      >
-        <Button type="button">test</Button>
-        <Sidebar />
-      </main>
-    </>
-  );
-}
+export const getServerSideProps = async () => {
+  return {
+    props: {},
+  };
+};
+
+export default ComponentsView;

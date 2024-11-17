@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 import { decryptAES, encryptAES } from "./crypto.helper";
-import { CookieName } from "@/utils/common/constants.common";
+import { CookieName } from "@utils/common/constants.common";
 
 export const getCookie = (key: string) => {
   const value = Cookies.get(key);

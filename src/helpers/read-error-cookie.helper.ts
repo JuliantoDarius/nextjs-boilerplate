@@ -1,4 +1,4 @@
-import { CookieName, initErrorResponse } from "@/utils/common/constants.common";
+import { CookieName, initErrorResponse } from "@utils/common/constants.common";
 import { getCookie } from "./cookie.helper";
 import { Id, toast } from "react-toastify";
 
