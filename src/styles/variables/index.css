@@ -1,11 +1,25 @@
 :root {
+  /* basic color */
   --background: #3e3030;
   --foreground: #6d6868;
   --text-color: #e5d6e1;
+  /* basic color */
+
+  /* navigation */
   --sidebar: #483f49;
   --sidebar-foreground: #422845;
   --navbar: #4f3153;
+  /* navigation */
+
+  /* scrollbar */
   --scrollbar-thumb-color: #4d307a;
   --scrollbar-track-color: #320e6a;
   --scrollbar-hover-color: #4b3471;
+  /* scrollbar */
+
+  /* Input Text */
+  --input-background: #404142;
+  --input-color-text: #f3f3f3;
+  --input-focus-border: #3b82f6;
+  /* Input Text */
 }

@@ -1,3 +1,4 @@
+import ComponentsForm from "@containers/_forms";
 import dynamic from "next/dynamic";
 
 const BarChart = dynamic(() => import("@components/ui/charts/bar-chart"));
@@ -6,6 +7,8 @@ const Layout = dynamic(() => import("@components/layouts"));
 export default function ComponentsView() {
   return (
     <Layout>
+      <ComponentsForm />
+
       <BarChart
         data={[
           { month: "jan", phone: 2, laptop: 3, pc: 5 },
