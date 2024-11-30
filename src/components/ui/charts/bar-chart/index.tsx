@@ -5,24 +5,26 @@ import {
 } from "@mantine/charts";
 import ChartTooltip from "../_components/tooltip";
 
-interface Props {
+type Props = {
   valueOnLeft?: boolean;
   series: BarChartSeries[];
   data: Record<string, any>[];
   dataKey: string;
-}
+  isCurrency?: boolean;
+};
 
 export default function BarChart({
   valueOnLeft = false,
   data,
   series,
   dataKey,
+  isCurrency = false,
   ...props
 }: Props & BarChartProps) {
   return (
     <div className="overflow-x-auto pb-4">
       <MantineBarChart
-        miw={1200}
+        miw={150 * data.length}
         h={400}
         data={data}
         dataKey={dataKey}
@@ -52,6 +54,7 @@ export default function BarChart({
               label={label}
               payload={payload}
               valueOnLeft={valueOnLeft}
+              isCurrency={isCurrency}
             />
           ),
         }}

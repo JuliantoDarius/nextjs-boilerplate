@@ -8,14 +8,14 @@ import {
   useState,
 } from "react";
 
-interface ISidebarContext {
+type ISidebarContext = {
   isSidebarOpen: boolean;
   setIsSidebarOpen: SetStateType<boolean>;
-}
+};
 
-interface Props {
+type Props = {
   children: ReactNode;
-}
+};
 
 const SidebarContext = createContext<ISidebarContext | undefined>(undefined);
 

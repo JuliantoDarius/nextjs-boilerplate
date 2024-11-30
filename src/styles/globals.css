@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
 /* CSS Library */
 @import "@mantine/core/styles.css";
 @import "@mantine/charts/styles.css";
+@import "@mantine/dates/styles.css";
 @import "react-toastify/dist/ReactToastify.css";
 /* CSS Library */
 
@@ -14,6 +17,9 @@
 
 /* CSS Components */
 @import "./components/input.css";
+@import "./components/button.css";
+@import "./components/table.css";
+@import "./components/pagination.css";
 /* CSS Components */
 
 @tailwind base;
@@ -22,9 +28,9 @@
 
 @layer base {
   body {
-    color: var(--text-color);
-    background: var(--background);
-    @apply overflow-x-hidden;
+    color: var(--primary-text-color) !important;
+    background: var(--background) !important;
+    @apply overflow-x-hidden font-jakarta tracking-wide !important;
   }
 
   * {
@@ -49,6 +55,15 @@
   *::-webkit-scrollbar-thumb:hover {
     background-color: var(--scrollbar-hover-color); /* Hover color */
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-wider;
+  }
 }
 
 @layer utilities {
@@ -61,5 +76,17 @@
   .hide-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  .link {
+    @apply hover:underline;
+  }
+
+  ._skeleton::before {
+    background-color: var(--skeleton-before) !important;
+  }
+
+  ._skeleton::after {
+    background-color: var(--skeleton-after) !important;
   }
 }

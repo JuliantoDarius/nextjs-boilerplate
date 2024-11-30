@@ -1,0 +1,22 @@
+.__page-container {
+  display: flex;
+  column-gap: 20px;
+  justify-content: end;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.__page-info {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .__page-container {
+    align-items: end;
+    flex-direction: column;
+  }
+
+  .__page-info {
+    font-size: 0.75rem;
+  }
+}

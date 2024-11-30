@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { useRouter } from "next/router";
 import { handleSidebarItemClass } from "../_utils/handleSidebarItemClass";
@@ -7,33 +7,48 @@ import {
   dropdownContainerAnimation,
   dropdownItemAnimation,
 } from "../_utils/dropdownAnimation";
+import { DropdownItem } from "@utils/types/menu.type";
 
-type DropdownItem = {
-  routeTo?: string;
-  onClick?: () => void;
-  children: ReactNode;
-};
-
-interface Props {
+type Props = {
   children: ReactNode;
   dropdownItems: DropdownItem[];
-}
+  activeUrl: string;
+  id: string;
+};
 
-export default function SidebarDropdown({ children, dropdownItems }: Props) {
+export default function SidebarDropdown({
+  children,
+  dropdownItems,
+  activeUrl,
+  id,
+}: Props) {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    const path = router.asPath;
+    const pathId = path.split("#")[1];
+    if (id !== pathId) {
+      setIsOpen(false);
+      setTimeout(() => {
+        setIsDropdownOpen(false);
+      }, 600);
+    }
+  }, [id, router]);
 
   return (
     <div
       onClick={() => {
         setIsOpen((prev) => !prev);
+        router.replace(`#${id}`, undefined, { shallow: true });
       }}
       className={`${handleSidebarItemClass(
         router,
-        "/dropdown"
+        activeUrl,
+        true
       )} relative rounded-xl cursor-pointer ${
-        isDropdownOpen || isOpen ? "bg-sidebar-foreground" : ""
+        isDropdownOpen || isOpen ? "bg-sidebar-foreground rounded-b-none" : ""
       }`}
     >
       {children}

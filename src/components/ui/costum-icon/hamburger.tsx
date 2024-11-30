@@ -1,10 +1,10 @@
 import { SetStateType } from "@/utils/types/set-state.type";
 
-interface Props {
+type Props = {
   isOpen: boolean;
   setIsOpen: SetStateType<boolean>;
   className?: string;
-}
+};
 
 export default function HamburgerIcon({ isOpen, setIsOpen, className }: Props) {
   let btnClass =

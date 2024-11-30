@@ -1,40 +1,42 @@
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
-
-type DefaultInput = DetailedHTMLProps<
-  InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
->;
+import {
+  InputProps,
+  Input as MantineInput,
+  PolymorphicComponentProps,
+} from "@mantine/core";
 
 type Props = {
   name: string;
   label?: string;
+  labelOnRight?: boolean;
   containerClassName?: string;
-} & DefaultInput;
+} & PolymorphicComponentProps<"input", InputProps>;
 
 export default function Input({
   name,
   className,
   label,
+  labelOnRight,
   containerClassName,
   ...props
 }: Props) {
-  const inputClass = `_input ${className ? ` ${className}` : ""}`;
-
-  const divClassName = `space-y-1 ${
-    containerClassName ? ` ${containerClassName}` : ""
-  }`;
+  let inputClass = `_input ${className ? ` ${className}` : ""}`;
+  inputClass += props.leftSection ? "pl-8" : "";
+  const labelClass = `_input-label ${labelOnRight ? "text-right" : ""}`;
+  const divClassName = `${containerClassName ? ` ${containerClassName}` : ""}`;
 
   return (
     <div className={divClassName}>
       {label && (
-        <label
-          htmlFor={props.id}
-          className="text-xs font-semibold text-[#c7c7c7]"
-        >
+        <label htmlFor={props.id} className={labelClass}>
           {label}
         </label>
       )}
-      <input className={inputClass} {...props} />
+      <MantineInput
+        classNames={{ input: inputClass }}
+        {...props}
+        error={undefined}
+      />
+      {/* <input className={inputClass} {...props} /> */}
     </div>
   );
 }

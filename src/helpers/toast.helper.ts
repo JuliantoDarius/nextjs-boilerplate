@@ -14,3 +14,7 @@ export const toastUpdate = (
     type,
   });
 };
+
+export const deleteToast = (toastId: Id) => {
+  toast.update(toastId, { isLoading: false, autoClose: 1 });
+};

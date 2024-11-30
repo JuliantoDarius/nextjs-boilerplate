@@ -1,10 +1,13 @@
+import { PaginationRequest } from "@utils/types/fetching/request.type";
+
 export enum CookieName {
   accessToken = "_Mor1entes",
   accessTokenExp = "_H4v3rts",
   refreshToken = "_M3s5i",
   rememberMe = "_C_R0n4lD0",
-  errorCodeList = "_d3Nis-L4w",
+  errorCodeList = "_N3ym4r",
   forgotPasswordUUID = "_V4n=Der+V4art",
+  profileData = "_M3nd13Ta",
 }
 
 export const initErrorResponse = {
@@ -41,3 +44,61 @@ export const initErrorResponse = {
 };
 
 export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "";
+
+export const MAX_FILE_SIZE = 5000000;
+export const ACCEPTED_IMAGE_TYPES = [
+  "image/jpeg",
+  "image/jpg",
+  "image/png",
+  "image/webp",
+];
+
+export const initialPaginationPayload = (): // profileData?: UserProfileData
+PaginationRequest => {
+  const body: PaginationRequest = {
+    limit_per_page: 10,
+    page: 1,
+    q: "",
+    start_date: "",
+    end_date: "",
+  };
+
+  // if (profileData?.is_admin === true) {
+  //   body.view_all = profileData?.is_admin === true ? "true" : undefined;
+  //   body.user_id = profileData.user_id;
+  // }
+  return body;
+};
+
+export const limitOptions = [
+  {
+    value: 5,
+    label: "5",
+  },
+  {
+    value: 10,
+    label: "10",
+  },
+  {
+    value: 15,
+    label: "15",
+  },
+  {
+    value: 20,
+    label: "20",
+  },
+  {
+    value: 25,
+    label: "25",
+  },
+];
+
+export enum BaseQueryKey {
+  accounts = "accounts",
+  expenses = "expenses",
+  incomes = "incomes",
+  users = "users",
+  dashboard = "dashboard",
+  mutations = "mutations",
+  transactions = "transactions",
+}

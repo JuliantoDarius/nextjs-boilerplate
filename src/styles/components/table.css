@@ -1,0 +1,11 @@
+table.table-fixed {
+  @apply mb-4;
+}
+
+.table-fixed th {
+  @apply border border-solid border-gray-500 bg-background p-4;
+}
+
+.table-fixed td {
+  @apply border border-solid border-gray-500 p-2 min-w-40 break-words;
+}

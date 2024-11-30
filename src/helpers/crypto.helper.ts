@@ -1,6 +1,6 @@
 import * as CryptoJS from "crypto-js";
 
-const key = process.env.SECRET_KEY ?? "Rg_@DP+P_roXy4_221_r@nd0m";
+const key = process.env.SECRET_KEY ?? "S3c_R3tt++adw2";
 
 export const encryptAES = (value: string) => {
   const cipherText = CryptoJS.AES.encrypt(value, key);

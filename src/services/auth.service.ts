@@ -6,16 +6,16 @@ import {
   ForgotPasswordPayload,
   LoginPayload,
   RegisterPayload,
-} from "@utils/interface/auth.interface";
+} from "@utils/types/fetching/auth.type";
 import axios from "axios";
 
 export const loginService = async (data: LoginPayload) => {
   try {
     const url = `${API_BASE_URL}${API_ROUTES.auth.login}`;
     const body: LoginPayload = {
-      email: data.email,
+      username: data.username,
       password: data.password,
-      remember_me: data.remember_me ?? false,
+      // remember_me: data.remember_me ?? false,
     };
     const response = await axios.post(url, body);
     return response.data;

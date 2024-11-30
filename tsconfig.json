@@ -22,7 +22,6 @@
       "@helpers/*": ["src/helpers/*"],
       "@services/*": ["src/services/*"],
       "@types/*": ["src/types/*"],
-      "@interfaces/*": ["src/interfaces/*"],
       "@hooks/*": ["src/hooks/*"],
       "@styles/*": ["src/styles/*"],
       "@/*": ["src/*"]

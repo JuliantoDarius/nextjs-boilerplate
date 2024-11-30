@@ -8,14 +8,14 @@ import {
   logoutService,
   registerService,
 } from "@services/auth.service";
+import { MutationOptions } from "@utils/types/react-query.type";
+import { useMutation } from "@tanstack/react-query";
 import {
   ChangePasswordPayload,
   ForgotPasswordPayload,
   LoginPayload,
   RegisterPayload,
-} from "@utils/interface/auth.interface";
-import { MutationOptions } from "@utils/types/react-query.type";
-import { useMutation } from "@tanstack/react-query";
+} from "@utils/types/fetching/auth.type";
 
 export const useLogin = (options?: MutationOptions<LoginPayload>) => {
   return useMutation({

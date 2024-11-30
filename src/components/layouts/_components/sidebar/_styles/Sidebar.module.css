@@ -1,0 +1,15 @@
+.sidebarItemActive {
+  @apply flex w-full gap-x-2 bg-sidebar-foreground px-6 py-2 rounded-full font-semibold items-center;
+}
+
+.sidebarItem {
+  @apply flex w-full gap-x-2 items-center px-6 py-2 rounded-full font-semibold hover:bg-sidebar-foreground transition-colors duration-300;
+}
+
+.dropdownContainer {
+  @apply overflow-hidden absolute top-10 left-0 px-6 pb-6 pt-2 w-full bg-sidebar-foreground flex flex-col gap-y-2 rounded-b-xl z-50;
+}
+
+.dropdownItem {
+  @apply text-left hover:underline;
+}

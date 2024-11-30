@@ -28,3 +28,10 @@ export const removeCookie = (
 ) => {
   Cookies.remove(key, options);
 };
+
+export const removeAllCookie = () => {
+  const keys = Object.keys(CookieName);
+  keys.forEach((key) => {
+    Cookies.remove(CookieName[key as keyof typeof CookieName]);
+  });
+};
