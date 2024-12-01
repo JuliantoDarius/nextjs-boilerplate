@@ -1,0 +1,221 @@
+//--------------------------------------------------------------------------------------------------------
+//	C O L O R   P A L L E T E
+//
+//	You can customize this section with your own set of variables.
+//
+//	To help with naming your preferred colors, it is recommended to use
+//	http://chir.ag/projects/name-that-color/ as this online generator
+// 	provides a vast range of unique names for your color choices.
+//
+
+$primary-10: #d6e1f9 !default;
+$primary-20: #bbccf6 !default;
+$primary-30: #98b3f1 !default;
+$primary-40: #769aec !default;
+$primary-50: #5480e8 !default;
+$primary-60: #3267e3 !default;
+$primary-70: #2a56bd !default;
+$primary-80: #214597 !default;
+$primary-90: #193472 !default;
+$primary-100: #11317d !default;
+
+$gray-10: #ffffff !default;
+$gray-20: #f5f5f5 !default;
+$gray-30: #ededed !default;
+$gray-40: #e0e0e0 !default;
+$gray-50: #c2c2c2 !default;
+$gray-60: #9e9e9e !default;
+$gray-70: #757575 !default;
+$gray-80: #616161 !default;
+$gray-90: #404040 !default;
+$gray-100: #0a0a0a !default;
+
+$danger-10: #f5d8d6 !default;
+$danger-20: #eebdba !default;
+$danger-30: #e59c98 !default;
+$danger-40: #dc7c76 !default;
+$danger-50: #d45b53 !default;
+$danger-60: #cb3a31 !default;
+$danger-70: #a93029 !default;
+$danger-80: #872721 !default;
+$danger-90: #661d19 !default;
+$danger-100: #441310 !default;
+
+$success-10: #d9e9e2 !default;
+$success-20: #c0dbce !default;
+$success-30: #a1c9b5 !default;
+$success-40: #82b79d !default;
+$success-50: #62a584 !default;
+$success-60: #43936c !default;
+$success-70: #387b5a !default;
+$success-80: #2d6248 !default;
+$success-90: #224a36 !default;
+$success-100: #20573d !default;
+
+$warning-10: #f5e5d5 !default;
+$warning-20: #eed3b9 !default;
+$warning-30: #e6bd96 !default;
+$warning-40: #dea774 !default;
+$warning-50: #d59151 !default;
+$warning-60: #cd7b2e !default;
+$warning-70: #ab6726 !default;
+$warning-80: #89521f !default;
+$warning-90: #673e17 !default;
+$warning-100: #734011 !default;
+
+$primary-color-base: $primary-60;
+$success-color-base: $success-60;
+$warning-color-base: $warning-60;
+$danger-color-base: $danger-60;
+$gray-base: $gray-60;
+$white-color-base: #ffffff !default;
+
+//--------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------
+//  C O L O R   S H A D E S
+//
+//	Below is the variable defintion of colors which are used in
+//	components throughout the project.
+//
+
+$color-shades: (
+  primary: (
+    10: $primary-10,
+    20: $primary-20,
+    30: $primary-30,
+    40: $primary-40,
+    50: $primary-50,
+    60: $primary-60,
+    70: $primary-70,
+    80: $primary-80,
+    90: $primary-90,
+    100: $primary-100,
+  ),
+
+  success: (
+    10: $success-10,
+    20: $success-20,
+    30: $success-30,
+    40: $success-40,
+    50: $success-50,
+    60: $success-60,
+    70: $success-70,
+    80: $success-80,
+    90: $success-90,
+    100: $success-100,
+  ),
+
+  warning: (
+    10: $warning-10,
+    20: $warning-20,
+    30: $warning-30,
+    40: $warning-40,
+    50: $warning-50,
+    60: $warning-60,
+    70: $warning-70,
+    80: $warning-80,
+    90: $warning-90,
+    100: $warning-100,
+  ),
+
+  danger: (
+    10: $danger-10,
+    20: $danger-20,
+    30: $danger-30,
+    40: $danger-40,
+    50: $danger-50,
+    60: $danger-60,
+    70: $danger-70,
+    80: $danger-80,
+    90: $danger-90,
+    100: $danger-100,
+  ),
+
+  gray: (
+    0: $white-color-base,
+    10: $gray-10,
+    20: $gray-20,
+    30: $gray-30,
+    40: $gray-40,
+    50: $gray-50,
+    60: $gray-60,
+    70: $gray-70,
+    80: $gray-80,
+    90: $gray-90,
+    100: $gray-100,
+  ),
+) !default;
+
+//--------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------
+//  T H E M E   C O L O R S
+//
+$theme-colors: (
+  primary: $primary-color-base,
+  success: $success-color-base,
+  warning: $warning-color-base,
+  danger: $danger-color-base,
+  gray: $gray-base,
+  gray-10: $gray-10,
+  gray-20: $gray-20,
+  gray-30: $gray-30,
+  gray-40: $gray-40,
+  gray-50: $gray-50,
+  gray-60: $gray-60,
+  gray-70: $gray-70,
+  gray-80: $gray-80,
+  gray-90: $gray-90,
+  gray-100: $gray-100,
+  primary-10: $primary-10,
+  primary-20: $primary-20,
+  primary-30: $primary-30,
+  primary-40: $primary-40,
+  primary-50: $primary-50,
+  primary-60: $primary-60,
+  primary-70: $primary-70,
+  primary-80: $primary-80,
+  primary-90: $primary-90,
+  primary-100: $primary-100,
+  warning-10: $warning-10,
+  warning-20: $warning-20,
+  warning-30: $warning-30,
+  warning-40: $warning-40,
+  warning-50: $warning-50,
+  warning-60: $warning-60,
+  warning-70: $warning-70,
+  warning-80: $warning-80,
+  warning-90: $warning-90,
+  warning-100: $warning-100,
+  danger-10: $danger-10,
+  danger-20: $danger-20,
+  danger-30: $danger-30,
+  danger-40: $danger-40,
+  danger-50: $danger-50,
+  danger-60: $danger-60,
+  danger-70: $danger-70,
+  danger-80: $danger-80,
+  danger-90: $danger-90,
+  danger-100: $danger-100,
+  success-10: $success-10,
+  success-20: $success-20,
+  success-30: $success-30,
+  success-40: $success-40,
+  success-50: $success-50,
+  success-60: $success-60,
+  success-70: $success-70,
+  success-80: $success-80,
+  success-90: $success-90,
+  success-100: $success-100,
+) !default;
+
+//--------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------
+//  Y I Q
+//
+
+$yiq-contrasted-threshold: 150 !default;
+
+$yiq-text-dark: gray(1700) !default;
+$yiq-text-light: gray(0) !default;
+
+//--------------------------------------------------------------------------------------------------------
