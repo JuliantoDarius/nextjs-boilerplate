@@ -1,9 +1,11 @@
+$test: red;
 :root {
   /* basic color */
   --background: #121212;
   --foreground: #1f1f1f;
   --primary-text-color: #f3f3f3;
   --secondary-text-color: #b0b0b0;
+  --test: #{$test};
   /* basic color */
 
   /* navigation */

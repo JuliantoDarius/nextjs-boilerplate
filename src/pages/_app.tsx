@@ -1,4 +1,4 @@
-import "@styles/globals.css";
+import "@styles/globals.scss";
 import { MantineProvider } from "@mantine/core";
 import { QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";

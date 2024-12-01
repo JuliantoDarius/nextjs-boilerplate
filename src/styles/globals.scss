@@ -8,20 +8,17 @@
 /* CSS Library */
 
 /* Custom Variables */
-@import "./variables/index.css";
+@import "./variables/index.scss";
 /* Custom Variables */
 
 /* Library Override */
-@import "./override/mantine-override.css";
+@import "./override/mantine-override.scss";
 /* Library Override */
 
 /* CSS Components */
-@import "./components/input.css";
-@import "./components/button.css";
-@import "./components/table.css";
-@import "./components/pagination.css";
+@import "./components/input.scss", "./components/button.scss",
+  "./components/table.scss", "./components/pagination.scss";
 /* CSS Components */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,8 +26,8 @@
 @layer base {
   body {
     color: var(--primary-text-color) !important;
-    background: var(--background) !important;
-    @apply overflow-x-hidden font-jakarta tracking-wide !important;
+    background: var(--test) !important;
+    @apply overflow-x-hidden font-jakarta tracking-wide #{!important};
   }
 
   * {
