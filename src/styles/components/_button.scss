@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 ._btn {
   @include button-base();
 }
@@ -5,27 +7,31 @@
 @each $name, $color in $theme-colors {
   ._btn-#{"" + $name} {
     @include button-base();
-    background-color: $color;
-    color: color-yiq($color);
-    &:hover {
-      &:not(:disabled) {
-        color: color-yiq($color);
-        background-color: colorize($name, dark);
+    & {
+      background-color: $color;
+      color: color-yiq($color);
+      &:hover {
+        &:not(:disabled) {
+          color: color-yiq(colorize($name, dark));
+          background-color: colorize($name, dark);
+        }
       }
     }
   }
 
   ._btn-#{"" + $name + "-outline"} {
     @include button-base();
-    background-color: transparent;
-    border: 2px solid $color;
-    color: color-yiq($color);
+    & {
+      background-color: transparent;
+      border: 2px solid $color;
+      color: color-yiq($color);
 
-    &:hover {
-      &:not(:disabled) {
-        background-color: $color;
-        color: color-yiq($color);
-        border: 2px solid $color;
+      &:hover {
+        &:not(:disabled) {
+          background-color: $color;
+          color: color-yiq($color);
+          border: 2px solid $color;
+        }
       }
     }
   }

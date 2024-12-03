@@ -84,7 +84,7 @@ export default function ComponentsForm() {
         <ErrorMessage formError={form.errors.repeat_password} />
       </div>
 
-      <Button type="submit" className="_btn-gray-outline">
+      <Button type="submit" className="_btn-primary">
         Submit
       </Button>
     </form>

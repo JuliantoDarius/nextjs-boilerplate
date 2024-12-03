@@ -1,0 +1,18 @@
+/* chart tooltip */
+.recharts-tooltip-cursor {
+  fill: transparent !important;
+}
+/* chart tooltip */
+
+/* legends */
+/* .m_17da7e62 {
+   @apply text-white;
+ } */
+
+@media (hover: hover) {
+  :where([data-mantine-color-scheme="light"]) .m_17da7e62:where(:hover) {
+    background-color: var(--mantine-color-gray-0);
+    color: black;
+  }
+}
+/* legends */

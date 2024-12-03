@@ -1,6 +1,8 @@
 @use "sass:math";
 @use "sass:map";
 @use "sass:string";
+@use "sass:color" as sassColor;
+@use "../variables/colors" as *;
 
 //-----------------------------------------------------------------------------
 //  T I N T E R   S H A D E R
@@ -11,57 +13,44 @@
 //  Usage:  `#{property}: tint(#{color}, #{percentage})` or
 //          `#{property}: tint(#{color}, #{percentage})`
 //
-
 // @function tint($color, $percentage) {
 //   @return mix(white, $color, $percentage);
 // }
-
 // @function shade($color, $percentage) {
 //   @return mix(black, $color, $percentage);
 // }
-
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
 //  C O L O R   S H A D E
 //
-
 // @function color-shade($type, $key, $shades: $color-shades) {
 //   @return nested-map-get($shades, $type, $key);
 // }
-
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
 //  C O L O R   F U N C T I O N S
 //
-
 // @function primary-color($key: 500) {
 //   @return color-shade(primary, $key);
 // }
-
 // @function secondary-color($key: 500) {
 //   @return color-shade(secondary, $key);
 // }
-
 // @function success-color($key: 500) {
 //   @return color-shade(success, $key);
 // }
-
 // @function danger-color($key: 500) {
 //   @return color-shade(danger, $key);
 // }
-
 // @function warning-color($key: 500) {
 //   @return color-shade(warning, $key);
 // }
-
 // @function gray($key: 100) {
 //   @return color-shade(gray, $key);
 // }
-
 // @function brand-color($key: 500) {
 //   @return color-shade(brand, $key);
 // }
-
 // @function colorize($name, $key: 500) {
 //   @if $name == primary {
 //     @return color-shade(primary, $key);
@@ -83,7 +72,6 @@
 //     @return color-shade(gray, $key);
 //   }
 // }
-
 @function theme-color($key: primary, $map: $theme-colors) {
   @return map.get($map, $key);
 }
@@ -123,9 +111,10 @@
 //  C O L O R   Y I Q
 //
 @function color-yiq($color) {
-  $r: red($color);
-  $g: green($color);
-  $b: blue($color);
+  // $r: sassColor.red($color);
+  $r: sassColor.channel($color, "red");
+  $g: sassColor.channel($color, "green");
+  $b: sassColor.channel($color, "blue");
 
   $yiq: math.div((($r * 299) + ($g * 587) + ($b * 114)), 1000);
   $yiq-contrasted-threshold: 150;

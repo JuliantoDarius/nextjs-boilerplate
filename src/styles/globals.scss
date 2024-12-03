@@ -1,3 +1,5 @@
+@use "./main" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 /* CSS Library */
@@ -7,34 +9,14 @@
 @import "react-toastify/dist/ReactToastify.css";
 /* CSS Library */
 
-/* Custom Variables */
-@import "./abstracts/variables", "./abstracts/functions";
-/* Custom Variables */
-
-// MIXINS
-@import "./abstracts/mixins/border", "./abstracts/mixins/transform",
-  "./abstracts/mixins/transition", "./abstracts/mixins/button";
-// MIXINS
-
-@import "./base/color";
-
-/* Library Override */
-@import "./override/mantine-override.scss";
-/* Library Override */
-
-/* CSS Components */
-@import "./components/input.scss", "./components/button.scss",
-  "./components/table.scss", "./components/pagination.scss",
-  "./components/layout", "./components/sidebar", "./components/navbar";
-/* CSS Components */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    color: var(--primary-text-color) !important;
-    background: var(--background) !important;
+    color: colorize("gray", 10) !important;
+    background: $background !important;
     overflow-x: hidden;
     font-family: "Plus Jakarta Sans", sans-serif;
     letter-spacing: 0.025rem;

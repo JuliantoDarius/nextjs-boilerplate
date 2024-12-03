@@ -1,3 +1,5 @@
+@use "../../abstracts/index" as *;
+
 ._layout {
   z-index: 30;
   padding: $layout-padding;

@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 ._input {
   width: 100%;
   background-color: colorize("gray", 10);

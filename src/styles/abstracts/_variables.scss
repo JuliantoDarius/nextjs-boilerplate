@@ -1,4 +1,4 @@
-@import "./variables/colors", "./variables/sidebar", "./variables/layout";
+@use "./variables/colors" as *;
 
 :root {
   /* basic color */

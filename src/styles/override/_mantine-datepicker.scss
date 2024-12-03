@@ -1,22 +1,5 @@
-/* chart tooltip */
-.recharts-tooltip-cursor {
-  fill: transparent !important;
-}
+@use "../abstracts/index" as *;
 
-/* legends */
-/* .m_17da7e62 {
-  @apply text-white;
-} */
-
-@media (hover: hover) {
-  :where([data-mantine-color-scheme="light"]) .m_17da7e62:where(:hover) {
-    background-color: var(--mantine-color-gray-0);
-    color: black;
-  }
-}
-/* legends */
-
-/* Datepicker */
 ._datepicker-date[data-weekend="true"] {
   color: $danger-base !important;
 }

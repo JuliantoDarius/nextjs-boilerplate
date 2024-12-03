@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 @each $theme, $color in $theme-colors {
   .clr--#{"" + $theme} {
     color: $color;
