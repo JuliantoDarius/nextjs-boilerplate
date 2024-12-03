@@ -2,7 +2,6 @@ import { ReactNode, useEffect, useState } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { useRouter } from "next/router";
 import { handleSidebarItemClass } from "../_utils/handleSidebarItemClass";
-import styles from "../_styles/Sidebar.module.css";
 import {
   dropdownContainerAnimation,
   dropdownItemAnimation,
@@ -61,7 +60,7 @@ export default function SidebarDropdown({
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className={styles.dropdownContainer}
+            className="_dropdown-container"
           >
             {dropdownItems.map((item, i) => {
               if (item.routeTo) {
@@ -69,7 +68,7 @@ export default function SidebarDropdown({
                   <m.a
                     key={`dropdown-item-${i}`}
                     variants={dropdownItemAnimation}
-                    className={styles.dropdownItem}
+                    className="_dropdown-item"
                     href={item.routeTo}
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -83,7 +82,7 @@ export default function SidebarDropdown({
                   key={`dropdown-item-${i}`}
                   type="button"
                   variants={dropdownItemAnimation}
-                  className={styles.dropdownItem}
+                  className="_dropdown-item"
                   onClick={(e) => {
                     e.stopPropagation();
                     item?.onClick?.();

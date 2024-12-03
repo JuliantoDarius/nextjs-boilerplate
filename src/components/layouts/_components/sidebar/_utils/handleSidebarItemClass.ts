@@ -1,5 +1,4 @@
 import { NextRouter } from "next/router";
-import styles from "../_styles/Sidebar.module.css";
 
 export const handleSidebarItemClass = (
   router: NextRouter,
@@ -7,11 +6,9 @@ export const handleSidebarItemClass = (
   includeCondition: boolean = false
 ) => {
   if (!includeCondition) {
-    return router.pathname === url
-      ? styles.sidebarItemActive
-      : styles.sidebarItem;
+    return router.pathname === url ? "_sidebar-item-active" : "_sidebar-item";
   }
   return router.pathname.includes(url)
-    ? styles.sidebarItemActive
-    : styles.sidebarItem;
+    ? "_sidebar-item-active"
+    : "_sidebar-item";
 };

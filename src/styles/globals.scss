@@ -75,10 +75,10 @@
   }
 
   ._skeleton::before {
-    background-color: var(--skeleton-before) !important;
+    background-color: $skeleton-before !important;
   }
 
   ._skeleton::after {
-    background-color: var(--skeleton-after) !important;
+    background-color: $skeleton-after !important;
   }
 }

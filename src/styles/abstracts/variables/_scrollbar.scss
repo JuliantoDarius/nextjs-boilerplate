@@ -1,0 +1,5 @@
+@use "./colors" as *;
+
+$scrollbar-thumb: $foreground;
+$scrollbar-track: #444444;
+$scrollbar-hover: $foreground;
