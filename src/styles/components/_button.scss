@@ -1,23 +1,32 @@
 ._btn {
-  @apply px-6 transition-colors duration-300 ease-out rounded-lg;
+  @include button-base();
 }
 
-._btn:disabled {
-  @apply bg-slate-500 text-slate-300 hover:bg-slate-500 cursor-not-allowed;
-}
+@each $name, $color in $theme-colors {
+  ._btn-#{"" + $name} {
+    @include button-base();
+    background-color: $color;
+    color: color-yiq($color);
+    &:hover {
+      &:not(:disabled) {
+        color: color-yiq($color);
+        background-color: colorize($name, dark);
+      }
+    }
+  }
 
-._btn-primary {
-  @apply _btn bg-primary rounded-lg hover:bg-primary-hover;
-}
+  ._btn-#{"" + $name + "-outline"} {
+    @include button-base();
+    background-color: transparent;
+    border: 2px solid $color;
+    color: color-yiq($color);
 
-._btn-primary-outline {
-  @apply _btn border-2 border-solid border-primary bg-transparent hover:bg-primary;
-}
-
-._btn-danger {
-  @apply _btn bg-danger hover:bg-danger-hover;
-}
-
-._btn-danger-outline {
-  @apply _btn border-2 border-solid border-danger bg-transparent hover:bg-danger;
+    &:hover {
+      &:not(:disabled) {
+        background-color: $color;
+        color: color-yiq($color);
+        border: 2px solid $color;
+      }
+    }
+  }
 }

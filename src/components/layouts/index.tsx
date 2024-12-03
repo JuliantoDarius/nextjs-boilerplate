@@ -14,11 +14,7 @@ export default function Layout({ children }: Props) {
   return (
     <>
       <Navbar />
-      <main
-        className={`z-30 p-4 mx-auto ${
-          isSidebarOpen ? "pl-[19rem]" : ""
-        } transition-all duration-500 ease-out`}
-      >
+      <main className="_layout" data-sidebar-open={isSidebarOpen}>
         {children}
 
         <BaseModal />

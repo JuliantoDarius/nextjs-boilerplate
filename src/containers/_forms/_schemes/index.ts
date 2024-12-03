@@ -3,6 +3,8 @@ import { z } from "zod";
 
 const schema = z
   .object({
+    username: z.string(),
+    select: z.number(),
     password: z.string().min(1, { message: "Your password is empty" }),
     repeat_password: z
       .string()
@@ -14,7 +16,9 @@ const schema = z
   });
 
 export const componentsInitValues = {
+  username: "",
   password: "",
+  select: 1,
   repeat_password: "",
 };
 

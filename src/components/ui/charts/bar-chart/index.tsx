@@ -31,19 +31,9 @@ export default function BarChart({
         tooltipAnimationDuration={200}
         barProps={{ radius: [10, 10, 0, 0] }}
         withLegend
-        styles={{
-          legend: {
-            display: "flex",
-            columnGap: "1rem",
-            fontWeight: "600",
-            justifyContent: "start",
-            marginBottom: "3rem",
-          },
-          legendItem: {
-            display: "flex",
-            alignItems: "center",
-            columnGap: "0.3rem",
-          },
+        classNames={{
+          legend: "flex gap-4 font-semibold mb-10 clr--base justify-start",
+          legendItem: "flex items-center gap-1.5",
         }}
         yAxisProps={{ color: "#d1d5db" }}
         xAxisProps={{ color: "#d1d5db" }}

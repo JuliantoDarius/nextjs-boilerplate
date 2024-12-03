@@ -1,0 +1,21 @@
+._navbar {
+  z-index: 40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $foreground;
+  padding: 1rem 0.5rem;
+  color: colorize("gray", 10);
+
+  transition: all 500ms ease-out;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+
+  &[data-sidebar-open="true"] {
+    padding-left: $sidebar-width + $layout-padding;
+  }
+}
+
+// pl-19rem when sidebar open

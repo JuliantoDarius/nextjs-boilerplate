@@ -58,7 +58,7 @@ export default function InputSelect({
   const [query, setQuery] = useDebouncedState("", 500);
 
   return (
-    <div className="relative w-full" ref={clickOutsideRef}>
+    <div className="_input-select-container" ref={clickOutsideRef}>
       <Input
         name={name}
         type="text"
@@ -94,9 +94,7 @@ export default function InputSelect({
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className={`absolute z-10 max-h-48 overflow-x-hidden hide-scrollbar overflow-y-auto w-full pt-2 pb-2 rounded-b-lg top-12 left-0 text-input-color-text bg-input-background flex flex-col gap-y-2 ${
-              showOptions ? "" : "pointer-events-none z-0"
-            }`}
+            data-dropdown-open={showOptions}
           >
             {handleSearch && (
               <div className="w-full sticky top-0 px-3 pt-2 bg-white">
@@ -126,11 +124,8 @@ export default function InputSelect({
                     <button
                       key={`${opt[optionName]}-${i}`}
                       type="button"
-                      className={`w-full ${
-                        value === opt[optionValue]
-                          ? "bg-primary text-white"
-                          : ""
-                      } text-left hover:bg-primary hover:text-white rounded px-2 py-1.5 transition-colors duration-300 text-sm font-semibold`}
+                      className="_dropdown-item"
+                      data-active={value === opt[optionValue]}
                       onClick={() => {
                         setShowOptions(false);
                         onChange(opt[optionValue]);

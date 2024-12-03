@@ -1,11 +1,16 @@
 table.table-fixed {
-  @apply mb-4;
+  margin-bottom: 1rem;
 }
 
 .table-fixed th {
-  @apply border border-solid border-gray-500 bg-background p-4;
+  border: 1px solid colorize("gray", 30);
+  background-color: $background;
+  padding: 1rem;
 }
 
 .table-fixed td {
-  @apply border border-solid border-gray-500 p-2 min-w-40 break-words;
+  border: 1px solid colorize("gray", 30);
+  padding: 0.5rem;
+  min-width: 10rem;
+  overflow-wrap: break-word;
 }

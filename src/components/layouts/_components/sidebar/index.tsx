@@ -11,11 +11,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <section
-        className={`z-50 fixed top-0 left-0 h-full min-h-[100dvh] w-72 bg-sidebar transition-transform duration-500 ease-out ${
-          isSidebarOpen ? "" : "-translate-x-80"
-        } text-white overflow-y-auto`}
-      >
+      <section className="_sidebar" data-sidebar-close={isSidebarOpen}>
         <div className="py-10 space-y-20">
           <div className="flex flex-col gap-y-6 w-[80%] mx-auto">
             <h3 className="font-bold text-3xl text-center mb-10">Your Brand</h3>
@@ -53,9 +49,8 @@ export default function Sidebar() {
         </div>
       </section>
       <div
-        className={`${
-          isSidebarOpen ? "w-full" : "w-0"
-        } lg:hidden h-[100dvh] fixed top-0 left-0 bg-black/80 z-[45] transition-all duration-500 ease-out`}
+        className="_sidebar-cover lg:hidden"
+        data-sidebar-open={isSidebarOpen}
         onClick={() => setIsSidebarOpen(false)}
       ></div>
     </>

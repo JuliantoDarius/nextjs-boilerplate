@@ -8,8 +8,15 @@
 /* CSS Library */
 
 /* Custom Variables */
-@import "./variables/index.scss";
+@import "./abstracts/variables", "./abstracts/functions";
 /* Custom Variables */
+
+// MIXINS
+@import "./abstracts/mixins/border", "./abstracts/mixins/transform",
+  "./abstracts/mixins/transition", "./abstracts/mixins/button";
+// MIXINS
+
+@import "./base/color";
 
 /* Library Override */
 @import "./override/mantine-override.scss";
@@ -17,7 +24,8 @@
 
 /* CSS Components */
 @import "./components/input.scss", "./components/button.scss",
-  "./components/table.scss", "./components/pagination.scss";
+  "./components/table.scss", "./components/pagination.scss",
+  "./components/layout", "./components/sidebar", "./components/navbar";
 /* CSS Components */
 @tailwind base;
 @tailwind components;
@@ -26,8 +34,11 @@
 @layer base {
   body {
     color: var(--primary-text-color) !important;
-    background: var(--test) !important;
-    @apply overflow-x-hidden font-jakarta tracking-wide #{!important};
+    background: var(--background) !important;
+    overflow-x: hidden;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    letter-spacing: 0.025rem;
+    color: colorize("gray", 10);
   }
 
   * {
@@ -59,7 +70,8 @@
   h4,
   h5,
   h6 {
-    @apply font-bold tracking-wider;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
   }
 }
 
@@ -75,8 +87,9 @@
     scrollbar-width: none; /* Firefox */
   }
 
-  .link {
-    @apply hover:underline;
+  .link:hover {
+    text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
   }
 
   ._skeleton::before {

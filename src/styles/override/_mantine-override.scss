@@ -1,6 +1,6 @@
 /* chart tooltip */
 .recharts-tooltip-cursor {
-  @apply fill-transparent #{!important};
+  fill: transparent !important;
 }
 
 /* legends */
@@ -18,17 +18,17 @@
 
 /* Datepicker */
 ._datepicker-date[data-weekend="true"] {
-  @apply text-red-500 #{!important};
+  color: $danger-base !important;
 }
 
 ._datepicker-date[data-in-range="true"] {
-  @apply bg-primary-30 #{!important};
+  background-color: $primary-light !important;
 }
 
 ._datepicker-date[data-selected="true"] {
-  @apply bg-primary #{!important};
+  background-color: $primary-base !important;
 }
 
 ._datepicker-date[data-weekend="true"][data-selected="true"] {
-  @apply text-primary-text-color #{!important};
+  color: white !important;
 }

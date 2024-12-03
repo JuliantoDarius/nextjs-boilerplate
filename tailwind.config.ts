@@ -29,7 +29,7 @@ export default {
         "primary-text-color": "var(--primary-text-color)",
         "secondary-text-color": "var(--secondary-text-color)",
         primary: "var(--clr-primary)",
-        "primary-30": "var(--clr-primary-30)",
+        "primary-light": "var(--clr-primary-light)",
         "primary-hover": "var(--clr-primary-hover)",
         danger: "var(--clr-danger)",
         "danger-hover": "var(--clr-danger-hover)",

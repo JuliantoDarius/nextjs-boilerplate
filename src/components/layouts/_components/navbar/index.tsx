@@ -31,11 +31,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className={`z-40 flex justify-between items-center bg-navbar px-4 py-2 text-white ${
-        isSidebarOpen ? "pl-[19rem]" : ""
-      } transition-all duration-500 ease-out`}
-    >
+    <nav className="_navbar" data-sidebar-open={isSidebarOpen}>
       <div
         className="cursor-pointer ml-2"
         onClick={() => setIsSidebarOpen((prev) => !prev)}

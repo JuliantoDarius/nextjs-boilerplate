@@ -1,0 +1,17 @@
+@each $theme, $color in $theme-colors {
+  .clr--#{"" + $theme} {
+    color: $color;
+  }
+
+  .bg--#{"" + $theme} {
+    background-color: $color;
+  }
+}
+
+.clr--base {
+  color: colorize("gray", 10);
+}
+
+.clr--subtitle {
+  color: colorize("gray", 30);
+}

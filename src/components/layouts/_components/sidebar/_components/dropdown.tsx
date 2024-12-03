@@ -48,7 +48,7 @@ export default function SidebarDropdown({
         activeUrl,
         true
       )} relative rounded-xl cursor-pointer ${
-        isDropdownOpen || isOpen ? "bg-sidebar-foreground rounded-b-none" : ""
+        isDropdownOpen || isOpen ? "bg-foreground rounded-b-none" : ""
       }`}
     >
       {children}
