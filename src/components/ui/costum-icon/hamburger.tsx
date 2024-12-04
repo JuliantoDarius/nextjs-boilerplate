@@ -8,7 +8,7 @@ type Props = {
 
 export default function HamburgerIcon({ isOpen, setIsOpen, className }: Props) {
   let btnClass =
-    "bg-foreground flex flex-col gap-y-2 items-center justify-center px-3 py-4 rounded-md";
+    "bg--foreground flex flex-col gap-y-2 items-center justify-center px-3 py-4 rounded-md";
   btnClass += className ? " " + className : "";
 
   return (

@@ -22,23 +22,32 @@ $gray-30: #c9c9c9;
 $gray-dark: #343a40 !default;
 $gray-100: #191919 !default;
 
+// CONTAINER COLOR
+$background: #121212 !default;
+$foreground: #1f1f1f !default;
+// CONTAINER COLOR
+
 $theme-colors: (
   primary: $primary-base,
   primary-base: $primary-base,
   primary-light: $primary-light,
   primary-dark: $primary-dark,
+
   warning: $warning-base,
   warning-base: $warning-base,
   warning-light: $warning-light,
   warning-dark: $warning-dark,
+
   danger: $danger-base,
   danger-base: $danger-base,
   danger-light: $danger-light,
   danger-dark: $danger-dark,
+
   info: $info-base,
   info-base: $info-base,
   info-light: $info-light,
   info-dark: $info-dark,
+
   gray: $gray-base,
   gray-base: $gray-base,
   gray-10: $gray-10,
@@ -46,10 +55,8 @@ $theme-colors: (
   gray-30: $gray-30,
   gray-dark: $gray-dark,
   gray-100: $gray-100,
+
+  background: $background,
+  foreground: $foreground,
 ) !default;
 // BASE COLOR
-
-// CONTAINER COLOR
-$background: #121212 !default;
-$foreground: #1f1f1f !default;
-// CONTAINER COLOR

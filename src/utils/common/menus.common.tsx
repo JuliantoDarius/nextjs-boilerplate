@@ -13,20 +13,25 @@ export const menus: Menu[] = [
     icon: <FaHome className="text-xl" />,
   },
   {
+    routeTo: "/components",
+    menuText: "Components",
+    icon: <FaHome className="text-xl" />,
+  },
+  {
     routeTo: "/users",
     icon: <IoIosPeople className="text-xl" />,
     menuText: "User",
   },
-  // {
-  //   id: "users",
-  //   icon: <IoIosPeople className="text-xl" />,
-  //   menuText: "User",
-  //   routeTo: "/users",
-  //   dropdownMenu: [
-  //     { children: "List User", routeTo: "/users" },
-  //     { children: "Role User", routeTo: "/users/roles" },
-  //   ],
-  // },
+  {
+    id: "dropdown",
+    icon: <IoIosPeople className="text-xl" />,
+    menuText: "Dropdown",
+    routeTo: "/dropdown",
+    dropdownMenu: [
+      { children: "List User", routeTo: "#" },
+      { children: "Role User", routeTo: "#" },
+    ],
+  },
   {
     routeTo: "/accounts",
     icon: <MdAccountCircle className="text-xl" />,

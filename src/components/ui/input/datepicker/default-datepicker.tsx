@@ -8,11 +8,11 @@ export default function DefaultDatepicker(
       type="range"
       numberOfColumns={2}
       classNames={{
-        day: "hover:bg-slate-700 text-primary-text-color _datepicker-date",
+        day: "hover:bg-slate-700 clr--base _datepicker-date",
         calendarHeaderControl: "hover:bg-slate-700",
         calendarHeaderLevel: "hover:bg-slate-700",
-        yearsListControl: "text-primary-text-color hover:bg-slate-700",
-        monthsListControl: "text-primary-text-color hover:bg-slate-700",
+        yearsListControl: "clr--base hover:bg-slate-700",
+        monthsListControl: "clr--base hover:bg-slate-700",
       }}
       maxDate={new Date()}
       {...props}

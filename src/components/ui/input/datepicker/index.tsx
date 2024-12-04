@@ -17,15 +17,15 @@ export default function InputDatepicker(
       numberOfColumns={2}
       valueFormat="DD/MM/YYYY"
       popoverProps={{
-        classNames: { dropdown: "bg-foreground border-primary" },
+        classNames: { dropdown: "bg--foreground border-primary" },
       }}
       classNames={{
         input: "_input",
-        day: "hover:bg-slate-700 text-primary-text-color _datepicker-date",
+        day: "hover:bg-slate-700 clr--base _datepicker-date",
         calendarHeaderControl: "hover:bg-slate-700",
         calendarHeaderLevel: "hover:bg-slate-700",
-        yearsListControl: "text-primary-text-color hover:bg-slate-700",
-        monthsListControl: "text-primary-text-color hover:bg-slate-700",
+        yearsListControl: "clr--base hover:bg-slate-700",
+        monthsListControl: "clr--base hover:bg-slate-700",
       }}
       maxDate={new Date()}
       {...props}

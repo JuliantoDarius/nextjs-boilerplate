@@ -47,7 +47,7 @@ export default function SidebarDropdown({
         activeUrl,
         true
       )} relative rounded-xl cursor-pointer ${
-        isDropdownOpen || isOpen ? "bg-foreground rounded-b-none" : ""
+        isDropdownOpen || isOpen ? "bg--primary rounded-b-none" : ""
       }`}
     >
       {children}
@@ -60,7 +60,7 @@ export default function SidebarDropdown({
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="_dropdown-container"
+            className="_dropdown-container hide-scrollbar"
           >
             {dropdownItems.map((item, i) => {
               if (item.routeTo) {

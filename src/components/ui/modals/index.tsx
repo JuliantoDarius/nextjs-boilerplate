@@ -29,8 +29,8 @@ export default function BaseModal() {
       title={modalData?.title}
       centered
       classNames={{
-        content: "bg-foreground text-primary-text-color",
-        header: "bg-foreground text-primary-text-color",
+        content: "bg--foreground clr--base",
+        header: "bg--foreground clr--base",
       }}
     >
       {modalData?.children}
