@@ -13,15 +13,15 @@ export default function App({ Component, pageProps }: AppProps) {
       <MantineProvider>
         <SidebarProvider>
           <Component {...pageProps} />
-          <ToastContainer
-            autoClose={3000}
-            position="top-right"
-            theme="colored"
-            hideProgressBar
-            closeOnClick
-            pauseOnHover
-          />
         </SidebarProvider>
+        <ToastContainer
+          autoClose={3000}
+          position="top-right"
+          theme="colored"
+          hideProgressBar
+          closeOnClick
+          pauseOnHover
+        />
       </MantineProvider>
       <ReactQueryDevtools />
     </QueryClientProvider>

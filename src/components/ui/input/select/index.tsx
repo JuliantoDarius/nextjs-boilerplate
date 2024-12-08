@@ -94,10 +94,11 @@ export default function InputSelect({
             initial="hidden"
             animate="visible"
             exit="hidden"
+            className="_input-select-container hide-scrollbar"
             data-dropdown-open={showOptions}
           >
             {handleSearch && (
-              <div className="w-full sticky top-0 px-3 pt-2 bg-white">
+              <div className="_input-select-search">
                 <InputSearch
                   query={query}
                   setQuery={(search) => {

@@ -45,12 +45,18 @@ export default function ComponentsForm() {
             { value: 3, label: "test 3" },
             { value: 4, label: "test 4" },
             { value: 5, label: "test 5" },
+            { value: 6, label: "test 6" },
+            { value: 7, label: "test 7" },
+            { value: 8, label: "test 8" },
+            { value: 9, label: "test 9" },
+            { value: 10, label: "test 10" },
           ]}
           optionName="label"
           optionValue="value"
           value={form.getValues().select}
           label="Select"
           placeholder="select"
+          handleSearch={() => {}}
           onChange={(value) => {
             form.setFieldValue("select", value);
           }}

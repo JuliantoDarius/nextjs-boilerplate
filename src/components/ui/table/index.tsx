@@ -3,6 +3,7 @@ import Pagination from "@components/ui/pagination";
 import { TableColumn } from "@utils/types/table.type";
 import { useTableData } from "@hooks/useTableData";
 import { randomId } from "@mantine/hooks";
+import { ReactNode } from "react";
 
 type Props = {
   columns: TableColumn[];
@@ -40,8 +41,8 @@ export default function Table({
               {tableCells.map((cell) => {
                 return (
                   <tr key={randomId()}>
-                    {cell.map((c: any) => (
-                      <td key={randomId()}>{c}</td>
+                    {cell.map((item: ReactNode) => (
+                      <td key={randomId()}>{item}</td>
                     ))}
                   </tr>
                 );
