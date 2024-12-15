@@ -1,4 +1,5 @@
 @use "./colors" as *;
+@use "./base" as *;
 
 $scrollbar-thumb: $foreground;
 $scrollbar-track: #444444;

@@ -22,11 +22,6 @@ $gray-30: #c9c9c9;
 $gray-dark: #343a40 !default;
 $gray-100: #191919 !default;
 
-// CONTAINER COLOR
-$background: #121212 !default;
-$foreground: #1f1f1f !default;
-// CONTAINER COLOR
-
 $theme-colors: (
   primary: $primary-base,
   primary-base: $primary-base,
@@ -55,8 +50,5 @@ $theme-colors: (
   gray-30: $gray-30,
   gray-dark: $gray-dark,
   gray-100: $gray-100,
-
-  background: $background,
-  foreground: $foreground,
 ) !default;
 // BASE COLOR

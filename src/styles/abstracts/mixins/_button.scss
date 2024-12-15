@@ -1,13 +1,14 @@
 @use "../mixins/border" as *;
 @use "../mixins/transition" as *;
 @use "../functions/color" as *;
+@use "../variables/button" as *;
 
 @mixin button-base() {
   & {
     cursor: pointer;
-    padding-inline: 1.5rem;
-    @include border-radius(0.5rem);
-    @include transition(all 300ms ease-out);
+    padding-inline: $button-px;
+    @include border-radius($button-radius);
+    @include transition($button-transition);
   }
 
   &:disabled {

@@ -3,6 +3,7 @@
 @use "sass:string";
 @use "sass:color" as sassColor;
 @use "../variables/colors" as *;
+@use "../variables/base" as *;
 
 //-----------------------------------------------------------------------------
 //  T I N T E R   S H A D E R
@@ -121,7 +122,7 @@
   @if ($yiq >= $yiq-contrasted-threshold) {
     @return colorize("gray", 100);
   } @else {
-    @return colorize("gray", 10);
+    @return $color-default;
   }
 }
 

@@ -1,1 +1,22 @@
+@use "../variables/colors" as *;
+@use "../variables/base" as *;
+@use "../functions/color" as *;
+
 $sidebar-width: 16rem;
+$sidebar-color: $color-default;
+$sidebar-background: $foreground;
+$sidebar-transition: transform 500ms ease-out;
+
+$sidebar-cover-background: colorize("gray", 100);
+$sidebar-cover-opacity: 0.8;
+$sidebar-cover-transition: all 500ms ease-out;
+$sidebar-cover-blur: 20px;
+
+$sidebar-item-active-background: colorize("primary", base);
+$sidebar-item-padding: 0.5rem 1.5rem;
+$sidebar-item-font-weight: $font-weight-default;
+$sidebar-item-radius: 99999px;
+$sidebar-item-transition: all 300ms ease-out;
+
+$sidebar-dropdown-padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+$sidebar-dropdown-radius: 0.75rem;

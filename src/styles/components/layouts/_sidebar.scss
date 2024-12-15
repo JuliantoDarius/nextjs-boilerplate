@@ -1,7 +1,7 @@
 @use "../../abstracts/index" as *;
 
 ._sidebar {
-  color: colorize(gray, 10);
+  color: $color-default;
   overflow-y: auto;
   z-index: 50;
   position: fixed;
@@ -10,20 +10,12 @@
   height: 100%;
   min-height: 100dvh;
   width: $sidebar-width;
-  background-color: $foreground;
+  background-color: $sidebar-background;
 
-  transition: transform 500ms ease-out;
-  -webkit-transition: transform 500ms ease-out;
-  -moz-transition: transform 500ms ease-out;
-  -ms-transition: transform 500ms ease-out;
-  -o-transition: transform 500ms ease-out;
+  @include transition($sidebar-transition);
 
   &[data-sidebar-close="false"] {
-    transform: translateX(-$sidebar-width);
-    -webkit-transform: translateX(-$sidebar-width);
-    -moz-transform: translateX(-$sidebar-width);
-    -ms-transform: translateX(-$sidebar-width);
-    -o-transform: translateX(-$sidebar-width);
+    @include transform(translateX(-$sidebar-width));
   }
 }
 
@@ -33,17 +25,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: colorize("gray", 100);
-  opacity: 0.8;
+  background-color: $sidebar-cover-background;
+  opacity: $sidebar-cover-opacity;
 
-  filter: blur(20px);
-  -webkit-filter: blur(20px);
+  filter: blur($sidebar-cover-blur);
+  -webkit-filter: blur($sidebar-cover-blur);
 
-  transition: all 500ms ease-out;
-  -webkit-transition: all 500ms ease-out;
-  -moz-transition: all 500ms ease-out;
-  -ms-transition: all 500ms ease-out;
-  -o-transition: all 500ms ease-out;
+  @include transition($sidebar-cover-transition);
 
   &[data-sidebar-open="true"] {
     width: 100%;
@@ -54,25 +42,25 @@
   display: flex;
   width: 100%;
   column-gap: 0.5rem;
-  background-color: colorize("primary", base);
-  padding: 0.5rem 1.5rem;
-  font-weight: 600;
+  background-color: $sidebar-item-active-background;
+  padding: $sidebar-item-padding;
+  font-weight: $sidebar-item-font-weight;
   align-items: center;
-  @include border-radius(99999px);
+  @include border-radius($sidebar-item-radius);
 }
 
 ._sidebar-item {
   display: flex;
   width: 100%;
   column-gap: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  font-weight: 600;
+  padding: $sidebar-item-padding;
+  font-weight: $sidebar-item-font-weight;
   align-items: center;
   &:hover {
-    background-color: colorize("primary", base);
+    background-color: $sidebar-item-active-background;
   }
-  @include border-radius(99999px);
-  @include transition(all 300ms ease-out);
+  @include border-radius($sidebar-item-radius);
+  @include transition($sidebar-item-transition);
 }
 
 ._dropdown-container {
@@ -80,14 +68,14 @@
   position: absolute;
   top: 2.5rem;
   left: 0;
-  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  padding: $sidebar-dropdown-padding;
   width: 100%;
-  background-color: colorize("primary", base);
+  background-color: $sidebar-item-active-background;
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
-  border-bottom-left-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: $sidebar-dropdown-radius;
+  border-bottom-right-radius: $sidebar-dropdown-radius;
   z-index: 50;
 
   & ._dropdown-item {

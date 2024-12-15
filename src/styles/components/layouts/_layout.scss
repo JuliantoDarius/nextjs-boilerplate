@@ -4,11 +4,7 @@
   z-index: 30;
   padding: $layout-padding;
   margin-inline: auto;
-  transition: all 500ms ease-out;
-  -webkit-transition: all 500ms ease-out;
-  -moz-transition: all 500ms ease-out;
-  -ms-transition: all 500ms ease-out;
-  -o-transition: all 500ms ease-out;
+  @include transition($layout-transition);
 
   &[data-sidebar-open="true"] {
     padding-left: $sidebar-width + $layout-padding;

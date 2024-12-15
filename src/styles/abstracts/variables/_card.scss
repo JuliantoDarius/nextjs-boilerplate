@@ -1,0 +1,6 @@
+@use "./colors" as *;
+@use "./base" as *;
+
+$card-padding: 1.5rem;
+$card-background: $foreground;
+$card-radius: 0.375rem;

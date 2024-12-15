@@ -1,0 +1,7 @@
+@use "../abstracts/index" as *;
+
+._card {
+  padding: $card-padding;
+  background-color: $card-background;
+  @include border-radius($card-radius);
+}

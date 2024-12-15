@@ -1,0 +1,8 @@
+@use "../variables/colors" as *;
+@use "../variables/base" as *;
+@use "../functions/color" as *;
+
+$navbar-background: $foreground;
+$navbar-padding: 1rem 0.5rem;
+$navbar-color: $color-default;
+$navbar-transition: all 500ms ease-out;

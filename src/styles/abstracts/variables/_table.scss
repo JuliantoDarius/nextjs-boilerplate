@@ -1,0 +1,10 @@
+@use "../variables/colors" as *;
+@use "../variables/base" as *;
+@use "../functions/color" as *;
+
+$table-mb: 1rem;
+$table-cell-border: 1px solid colorize("gray", 30);
+$table-cell-background: $background;
+$table-th-padding: 1rem;
+$table-td-padding: 0.5rem;
+$table-td-min-width: 10rem;

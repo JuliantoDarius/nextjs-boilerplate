@@ -1,18 +1,18 @@
 @use "../abstracts/index" as *;
 
 table.table-fixed {
-  margin-bottom: 1rem;
+  margin-bottom: $table-mb;
 }
 
 .table-fixed th {
-  border: 1px solid colorize("gray", 30);
-  background-color: $background;
-  padding: 1rem;
+  border: $table-cell-border;
+  background-color: $table-cell-background;
+  padding: $table-th-padding;
 }
 
 .table-fixed td {
-  border: 1px solid colorize("gray", 30);
-  padding: 0.5rem;
-  min-width: 10rem;
+  border: $table-cell-border;
+  padding: $table-td-padding;
+  min-width: $table-td-min-width;
   overflow-wrap: break-word;
 }

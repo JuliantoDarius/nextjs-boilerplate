@@ -1,4 +1,18 @@
 @use "./colors" as *;
+@use "./base" as *;
+@use "../functions/color" as *;
 
 $input-background: $gray-10;
-$input-border: $primary-base;
+$input-border: 1px solid transparent;
+$input-border-color: $primary-base;
+$input-color: colorize("gray", 100);
+$input-padding: 0.5rem 0.75rem;
+$input-font-size: 0.875rem;
+$input-line-height: 1.25rem;
+$input-font-weight: $font-weight-default;
+$input-radius: 0.5rem;
+
+$input-label-font-size: 0.75rem;
+$input-label-line-height: 1rem;
+$input-label-font-weight: $font-weight-default;
+$input-label-color: $color-default;
