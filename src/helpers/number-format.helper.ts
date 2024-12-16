@@ -1,4 +1,6 @@
-export const formatNumber = (num: number, isCurrency = false) => {
+export const formatNumber = (num: number | string, isCurrency = false) => {
+  if (isNaN(Number(num))) return "";
+
   return new Intl.NumberFormat(
     "id-ID",
     isCurrency
@@ -7,5 +9,5 @@ export const formatNumber = (num: number, isCurrency = false) => {
           currency: "IDR",
         }
       : undefined
-  ).format(num);
+  ).format(Number(num));
 };

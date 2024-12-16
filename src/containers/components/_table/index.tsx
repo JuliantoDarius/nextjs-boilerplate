@@ -5,48 +5,45 @@ import { TableColumn } from "@utils/types/table.type";
 type TableData = {
   name: string;
   age: number;
-  hobby: string;
   balance: number;
   workingAs: string;
 };
 
 const exampleData: TableData[] = [
   {
-    name: "John",
+    name: "Ricardo Valdez",
     age: 20,
-    hobby: "Coding",
-    balance: 700000,
+    balance: 595760,
     workingAs: "Front-end Engineer",
   },
   {
-    name: "Rangga",
+    name: "Gregory Herrera",
     age: 20,
-    hobby: "Coding",
-    balance: 1000000,
+    balance: 414577,
     workingAs: "Back-end Engineer",
   },
   {
-    name: "Reza",
+    name: "Manuel Torres",
     age: 21,
-    hobby: "Gaming",
-    balance: 10000,
-    workingAs: "College",
+    balance: 315106,
+    workingAs: "Product Manager",
   },
 ];
 
 export const dataColumn: TableColumn[] = [
   columnHelper(exampleData, "name", "Name"),
   columnHelper(exampleData, "age", "Age"),
-  columnHelper(exampleData, "hobby", "Hobby"),
-  columnHelper(exampleData, "balance", "Balance"),
+  columnHelper(exampleData, "balance", "Balance", { isCurrency: true }),
   columnHelper(exampleData, "workingAs", "Working As"),
-  columnHelper(exampleData, "name", "Action", (value) => {
-    return (
-      <div className="w-full grid place-items-center">
-        <Button type="button" onClick={() => console.log(value, "action")}>
-          Edit
-        </Button>
-      </div>
-    );
+  columnHelper(exampleData, "name", "Action", {
+    children: (value) => {
+      return (
+        <div className="w-full grid place-items-center">
+          <Button type="button" onClick={() => console.log(value, "action")}>
+            Edit
+          </Button>
+        </div>
+      );
+    },
   }),
 ];
